@@ -10,15 +10,15 @@ const Homepg = () => {
     <div>
       <div>
         <div className="md:w-[90%] mx-auto">
-          <h1 className="md:block hidden p-3 m-3">Welcome Username</h1>
+          <h1 className="md:block hidden p-2 m-3 text-2xl font-bold">Welcome Username</h1>
           <div className="md:hidden">
-            <div className="rounded-full px-5 p-3 m-3 bg-transparent border border-white">
+            <div className="rounded-full px-5 p-3 m-3 bg-transparent text-black border-2 border-black">
               Welcome Username
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-3">
-            <div className="rounded-lg bg-white mx-3 py-2">
-              <h2 className="text-black mx-4 my-2">Balance</h2>
+            <div className="rounded-xl bg-white mx-3 py-2">
+              <h2 className="text-black mx-4 my-2 texl-lg">Balance</h2>
               <ul role="list" className=" my-2 md:w-[90%] w-[95%] mx-auto">
                 <li className="pb-3">
                   <div className="rounded-full border-2 border-black p-2 px-4 flex items-center">
@@ -54,9 +54,9 @@ const Homepg = () => {
                 </li>
               </ul>
             </div>
-            <div className="rounded-lg bg-white mx-3 py-2">
+            <div className="rounded-xl bg-white mx-3 py-2">
               <div className="flex justify-between">
-                <h2 className="text-black mx-4 my-2">Recent Transactions</h2>
+                <h2 className="text-black mx-4 my-2 text-lg">Recent Transactions</h2>
                 <Scan />
               </div>
               <ul role="list" className="mx-3 my-2 md:w-[90%] w-[95%] mx-auto">
@@ -97,12 +97,12 @@ const Homepg = () => {
           </div>
 
           <div className="p-1 m-3">
-          <h2 className="px-3">Goals</h2>
+          <h2 className="px-3 text-lg">Goals</h2>
           <div className="flex flex-row gap-2 py-2">
-            <div className="rounded-full bg-white text-black border-2 border-black p-2 px-4 flex items-center">
+            <div className="rounded-full bg-white text-black p-2 px-4 flex items-center">
               <h3>Short Term</h3>
             </div>
-            <div className="rounded-full bg-white text-black border-2 border-black p-2 px-4 flex items-center">
+            <div className="rounded-full bg-white text-black p-2 px-4 gap-3 flex items-center">
               <h3>Long Term</h3>
               <Route />
             </div>
@@ -136,7 +136,7 @@ const Homepg = () => {
           </div>
 
           <div className="p-1 mx-3">
-          <h2 className="px-3">Budget</h2>
+          <h2 className="px-3 text-lg">Budget</h2>
           <div className="flex flex-row gap-3 ">
           <div className="rounded-lg w-[80%] text-black bg-white my-3 py-2">
                 <Image src='' className="m-3 rounded-lg" width={20} height={20}/>
@@ -166,30 +166,30 @@ const Homepg = () => {
           </div>
           
           <div className="p-1 m-3">
-          <h2 className="px-3">Investments</h2>
+          <h2 className="px-3 text-lg">Investments</h2>
           <div className="grid md:grid-cols-6 grid-cols-2 gap-2 py-2">
-            <div className="rounded-lg bg-white text-black border-2 border-black p-2 px-4 ">
+            <div className="rounded-lg bg-white text-black p-2 px-4 ">
             <Image src='/img/insurance.png' className="m-1 mx-auto rounded-lg" width={100} height={20}/>
               <h3>Insurance</h3>
             </div>
-            <div className="rounded-lg bg-white text-black border-2 border-black p-2 px-4">
+            <div className="rounded-lg bg-white text-black p-2 px-4">
             <Image src='/img/mutualf.png' className="m-1 mx-auto rounded-lg" width={75} height={20}/>
               <h3>Mutual Funds</h3>
             </div>
-            <div className="rounded-lg bg-white text-black border-2 border-black p-2 px-4">
+            <div className="rounded-lg bg-white text-black p-2 px-4">
             <Image src='/img/nps.png' className="mx-auto my-1 rounded-lg" width={90} height={20}/>
               <h3>NPS</h3>
             </div>
-            <div className="rounded-lg bg-white text-black border-2 border-black p-2 px-4">
+            <div className="rounded-lg bg-white text-black p-2 px-4">
             <div className="h-4"/>
             <Image src='/img/stocks.png' className="mx-auto my-3 rounded-lg" width={120} height={20}/>
               <h3>Stocks</h3>
             </div>
-            <div className="rounded-lg bg-white text-black border-2 border-black p-2 px-4">
+            <div className="rounded-lg bg-white text-black p-2 px-4">
             <Image src='/img/sip.png' className="m-3 rounded-lg" width={100} height={20}/>
               <h3>SIP's</h3>
             </div>
-            <div className="rounded-lg bg-white text-black border-2 border-black p-2 px-4">
+            <div className="rounded-lg bg-white text-black p-2 px-4">
             <Image src='/img/homeloan.png' className="m-3 rounded-lg" width={100} height={20}/>
               <h3>Govt. Bonds</h3>
             </div>
@@ -197,20 +197,20 @@ const Homepg = () => {
           </div>
 
           <div className="p-1 m-3">
-          <h2 className="px-3">Debts</h2>
+          <h2 className="px-3 text-lg">Debts</h2>
           <div className="grid md:grid-cols-6 grid-cols-2 gap-2 py-2">
-            <div className="rounded-lg bg-white text-black border-2 border-black p-2 px-4">
+            <div className="rounded-lg bg-white text-black p-2 px-4">
             <Image src='/img/homeloan.png' className="mx-0.5 my-2 rounded-lg" width={120} height={120}/>
               <h3>Home Loan</h3>
             </div>
-            <div className="rounded-lg bg-white text-black border-2 border-black p-2 px-4">
+            <div className="rounded-lg bg-white text-black p-2 px-4">
             <PlusCircle/>
             </div>
           </div>
           </div>
 
           <div className="p-1 m-3">
-          <h2 className="px-3">Blogs</h2>
+          <h2 className="px-3 text-lg">Blogs</h2>
           <div className="flex flex-row gap-3 ">
           <div className="rounded-lg w-[80%] text-black bg-white my-3 py-2">
                 <h3 className="mx-3 pt-2 divide-y text-lg">Buy a House</h3>
