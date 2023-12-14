@@ -5,6 +5,9 @@ import React from "react";
 const Savingwhen = () => {
   return (
     <div className="py-6">
+      <div className="grid md:cols-2">
+
+      </div>
       <div className="rounded-full shadow-md px-5 p-3 mx-3 bg-transparent flex flex-row gap-3 text-black border-2 border-black">
         <Plane />
         Travel
@@ -14,15 +17,16 @@ const Savingwhen = () => {
       </h1>
       <Image
         src="/img/calendar.png"
-        className="mx-auto"
+        className="mx-auto my-5"
         width={100}
         height={100}
       />
-
-      <div inline-datepicker data-date="02/25/2022"></div>
+      <input type="date" className="rounded-full shadow-md py-4px-5 p-3 mb-3 mx-3 w-[90%] bg-transparent text-black border-2 border-black" />
+      <div className="mx-auto w-[50%]">
       <button className="rounded-full shadow-md px-16 text-center p-3 m-3 bg-transparent text-black border-2 border-black">
         Next
       </button>
+      </div>
 
       <div className="rounded-full shadow-md px-5 p-3 m-3 bg-transparent flex flex-row gap-3 text-black border-2 border-black">
         <Plane />
@@ -33,15 +37,17 @@ const Savingwhen = () => {
       </h1>
       <Image
         src="/img/moneybag.png"
-        className="mx-auto"
-        width={100}
-        height={100}
+        className="mx-auto py-3"
+        width={150}
+        height={150}
       />
-      <label className="w-full">Current Cost </label>
-      <input className="rounded-full shadow-md px-5 p-3 m-3 bg-transparent text-black border-2 border-black" />
+      <div className="mx-5 text-black">Current Cost</div>
+      <input className="rounded-full shadow-md px-5 p-3 mb-3 mx-3 w-[90%] bg-transparent text-black border-2 border-black" />
+      <div className="mx-auto w-[50%]">
       <button className="rounded-full justify-end shadow-md px-16 p-3 m-3 bg-transparent text-black border-2 border-black">
         Next
       </button>
+      </div>
     </div>
   );
 };

@@ -1,18 +1,36 @@
+// "use client";
 import { UserCircle2 } from "lucide-react";
 import { Scan } from "lucide-react";
+import { CircleUser } from "lucide-react";
 import { PlusCircle } from "lucide-react";
 import { Route } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+// import { onAuthStateChanged, signOut } from "firebase/auth";
+// import React, { useEffect, useState } from "react";
+// import { auth } from "@/lib/firebase";
 
 const Homepg = () => {
+  // const [userAuth, setUserAuth] = useState(null);
+  // useEffect(() => {
+  //   const listen = onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       setUserAuth(user);
+  //     } else {
+  //       setUserAuth(null);
+  //     }
+  //   });
+  //   return () => {
+  //     listen();
+  //   };
+  // }, []);
   return (
     <div>
       <div>
         <div className="md:w-[90%] mx-auto">
           <h1 className="md:block hidden p-2 m-3 text-2xl font-bold">Welcome Username</h1>
           <div className="md:hidden">
-            <div className="rounded-full px-5 p-3 m-3 bg-transparent text-black border-2 border-black">
+            <div className="rounded-full flex flex-row gap-3 px-5 p-3 m-3 bg-transparent text-black border-2 border-black">
+              <CircleUser/>
               Welcome Username
             </div>
           </div>
@@ -32,7 +50,7 @@ const Homepg = () => {
                       </p>
                     </div>
                     <div className="inline-flex text-green-400 items-center text-base font-semibold text-gray-900 dark:text-white">
-                      $320
+                    ₹1650
                     </div>
                   </div>
                 </li>
@@ -48,7 +66,7 @@ const Homepg = () => {
                       </p>
                     </div>
                     <div className="inline-flex text-green-400 items-center text-base font-semibold text-gray-900 dark:text-white">
-                      $1200
+                    ₹21600
                     </div>
                   </div>
                 </li>
@@ -65,14 +83,14 @@ const Homepg = () => {
                     <UserCircle2 />
                     <div className="flex-1 min-w-0 ms-4">
                       <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        HDFC Bank
+                        Groceries
                       </p>
                       <p className="text-sm text-gray-500 truncate dark:text-gray-400">
                         13/12/2023
                       </p>
                     </div>
                     <div className="inline-flex text-red-400 items-center text-base font-semibold text-gray-900 dark:text-white">
-                      $320
+                    ₹320
                     </div>
                   </div>
                 </li>
@@ -81,14 +99,14 @@ const Homepg = () => {
                     <UserCircle2 />
                     <div className="flex-1 min-w-0 ms-4">
                       <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Citizen Credit Bank
+                        Netflix Subscription
                       </p>
                       <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        13/12/2023
+                        14/12/2023
                       </p>
                     </div>
                     <div className="inline-flex text-red-400 items-center text-base font-semibold text-gray-900 dark:text-white">
-                      $1200
+                    ₹199
                     </div>
                   </div>
                 </li>
@@ -99,13 +117,13 @@ const Homepg = () => {
           <div className="p-1 m-3">
           <h2 className="px-3 text-lg">Goals</h2>
           <div className="flex flex-row gap-2 py-2">
-            <div className="rounded-full bg-white text-black p-2 px-4 flex items-center">
+            <a href="/goal" className="shadow-md rounded-full bg-white text-black p-2 px-4 flex items-center">
               <h3>Short Term</h3>
-            </div>
-            <div className="rounded-full bg-white text-black p-2 px-4 gap-3 flex items-center">
+            </a>
+            <a href="/goal" className="shadow-md rounded-full bg-white text-black p-2 px-4 gap-3 flex items-center">
               <h3>Long Term</h3>
               <Route />
-            </div>
+            </a>
           </div>
           <div className="flex flex-row gap-3 ">
           <div className="rounded-lg w-[80%] text-black bg-white my-3 py-2">
@@ -115,20 +133,20 @@ const Homepg = () => {
                 <div className="mx-3 py-2">
                     <p className="text-sm">Money Saved</p>
                     <div>
-                        <span className="text-md">$100 </span>
-                        <span className="text-xs">out of $200</span>
+                        <span className="text-md">₹17,00,000 </span>
+                        <span className="text-xs">out of ₹1,50,00,000</span>
                     </div>
                 </div>
             </div>
             <div className="rounded-lg w-[80%] text-black bg-white my-3 py-2">
                 <Image src='' className="m-3 rounded-lg" width={20} height={20}/>
-                <h3 className="mx-3 py-2 divide-y text-lg">Buy a House</h3>
+                <h3 className="mx-3 py-2 divide-y text-lg">Buy a Car</h3>
                 <div className="w-[95%] mx-auto bg-gray-100 h-0.5 "/>
                 <div className="mx-3 py-2">
                     <p className="text-sm">Money Saved</p>
                     <div>
-                        <span className="text-md">$100 </span>
-                        <span className="text-xs">out of $200</span>
+                        <span className="text-md">₹1,10,000 </span>
+                        <span className="text-xs">out of ₹1,37,000</span>
                     </div>
                 </div>
             </div>
@@ -140,25 +158,25 @@ const Homepg = () => {
           <div className="flex flex-row gap-3 ">
           <div className="rounded-lg w-[80%] text-black bg-white my-3 py-2">
                 <Image src='' className="m-3 rounded-lg" width={20} height={20}/>
-                <h3 className="mx-3 py-2 divide-y text-lg">Buy a House</h3>
+                <h3 className="mx-3 py-2 divide-y text-lg">Food</h3>
                 <div className="w-[95%] mx-auto bg-gray-100 h-0.5 "/>
                 <div className="mx-3 py-2">
-                    <p className="text-sm">Money Saved</p>
+                    <p className="text-sm">Money Used</p>
                     <div>
-                        <span className="text-md">$100 </span>
-                        <span className="text-xs">out of $200</span>
+                        <span className="text-md">₹6000 </span>
+                        <span className="text-xs">out of ₹8000</span>
                     </div>
                 </div>
             </div>
             <div className="rounded-lg w-[80%] text-black bg-white my-3 py-2">
                 <Image src='' className="m-3 rounded-lg" width={20} height={20}/>
-                <h3 className="mx-3 py-2 divide-y text-lg">Buy a House</h3>
+                <h3 className="mx-3 py-2 divide-y text-lg">Travel</h3>
                 <div className="w-[95%] mx-auto bg-gray-100 h-0.5 "/>
                 <div className="mx-3 py-2">
                     <p className="text-sm">Money Saved</p>
                     <div>
-                        <span className="text-md">$100 </span>
-                        <span className="text-xs">out of $200</span>
+                        <span className="text-md">₹360 </span>
+                        <span className="text-xs">out of ₹1000</span>
                     </div>
                 </div>
             </div>
@@ -190,7 +208,7 @@ const Homepg = () => {
               <h3>SIP's</h3>
             </div>
             <div className="rounded-lg bg-white text-black p-2 px-4">
-            <Image src='/img/homeloan.png' className="m-3 rounded-lg" width={100} height={20}/>
+            <Image src='/img/bonds.png' className="m-3 rounded-lg" width={100} height={20}/>
               <h3>Govt. Bonds</h3>
             </div>
           </div>
@@ -202,9 +220,6 @@ const Homepg = () => {
             <div className="rounded-lg bg-white text-black p-2 px-4">
             <Image src='/img/homeloan.png' className="mx-0.5 my-2 rounded-lg" width={120} height={120}/>
               <h3>Home Loan</h3>
-            </div>
-            <div className="rounded-lg bg-white text-black p-2 px-4">
-            <PlusCircle/>
             </div>
           </div>
           </div>
